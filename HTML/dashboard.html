@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusFix Dashboard</title>
+    <!-- Google Fonts & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- External CSS Link -->
+    <link rel="stylesheet" href="../CSS/dashboard.css">
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="brand">
+                    <a href="index.html">
+                        <img src="/image/campusfix-logo.png" alt="CampusFix Logo" />
+                    </a>
+                </div>
+                <ul class="nav-list">
+                    <li class="nav-item active">
+                        <a href="dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="report-problem.html"><i class="fa-regular fa-comment-dots"></i> Report Problem</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="my-reports.html"><i class="fa-regular fa-file-lines"></i> My Reports</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="notifications.html"><i class="fa-regular fa-bell"></i> Notifications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="profile.html"><i class="fa-regular fa-user"></i> Profile</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="logout-btn">
+                <a href="index.html"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="welcome-text">
+                    <button id="sidebarToggle" class="toggle-btn">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <h1>Good Afternoon, Anup 👋</h1>
+                    <p>Have you noticed a problem on campus?</p>
+                </div>
+                <div class="user-profile">
+                    <div class="notification-icon">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="notification-badge"></span>
+                    </div>
+                    <div class="profile-info">
+                        <div class="avatar">
+                            <i class="fa-solid fa-user" style="color: #475569;"></i>
+                        </div>
+                        <span class="profile-name">Anup</span>
+                        <i class="fa-solid fa-chevron-down" style="font-size: 0.7rem; color: #64748b;"></i>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Content Grid -->
+            <div class="dashboard-grid">
+                <!-- Left Column -->
+                <div class="left-column">
+                    <button class="btn-report" id="reportBtn">
+                        <i class="fa-solid fa-plus"></i> Report a Problem
+                    </button>
+
+                    <!-- Stats Cards -->
+                    <div class="stats-cards">
+                        <div class="stat-card blue">
+                            <div class="stat-title">Total Reports</div>
+                            <div class="stat-value">05</div>
+                        </div>
+                        <div class="stat-card orange">
+                            <div class="stat-title">Pending</div>
+                            <div class="stat-value">02</div>
+                        </div>
+                        <div class="stat-card purple">
+                            <div class="stat-title">In Progress</div>
+                            <div class="stat-value">01</div>
+                        </div>
+                        <div class="stat-card green">
+                            <div class="stat-title">Resolved</div>
+                            <div class="stat-value">02</div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Reports Card -->
+                    <div class="card3">
+                        <div class="card-header">
+                            <span class="card-title">Recent Reports</span>
+                        </div>
+                        <div class="reports-list">
+                            <!-- Report Item 1 -->
+                            <div class="report-item">
+                                <div class="report-info">
+                                    <div class="report-id">CF109</div>
+                                    <div class="report-desc">Electrical Problem in CSE Lab 2</div>
+                                    <div class="report-loc">Academic Block, 2nd Floor, CSE Lab 2</div>
+                                </div>
+                                <div class="report-meta">
+                                    <div class="meta-group">
+                                        <span class="meta-label">Priority</span>
+                                        <span class="status-badge text-critical">
+                                            <span class="dot critical"></span> Critical
+                                        </span>
+                                    </div>
+                                    <div class="meta-group">
+                                        <span class="meta-label">Status</span>
+                                        <span class="status-badge text-in-progress">
+                                            <span class="dot in-progress"></span> In Progress
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Report Item 2 -->
+                            <div class="report-item">
+                                <div class="report-info">
+                                    <div class="report-id">CF102</div>
+                                    <div class="report-desc">Wi-Fi not working</div>
+                                    <div class="report-loc">Academic Block, 2nd Floor, CSE Lab 2</div>
+                                </div>
+                                <div class="report-meta">
+                                    <div class="meta-group">
+                                        <span class="meta-label">Priority</span>
+                                        <span class="status-badge text-high">
+                                            <span class="dot high"></span> High
+                                        </span>
+                                    </div>
+                                    <div class="meta-group">
+                                        <span class="meta-label">Status</span>
+                                        <span class="status-badge text-resolved">
+                                            <span class="dot resolved"></span> Resolved
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="view-all">
+                            <a href="my-reports.html">View All Reports &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="right-column">
+                    <!-- Important Update Card -->
+                    <div class="update-card">
+                        <div class="update-title">Important Update</div>
+                        <div class="update-text">
+                            Your complaint CF109 has been assigned to Electrical Department.
+                        </div>
+                        <a href="my-reports.html" class="update-link">View Details</a>
+                    </div>
+
+                    <!-- Campus Impact Card -->
+                    <div class="impact-card">
+                        <div class="card-title">Campus Impact</div>
+                        <div class="heatmap-subtitle">Issue Heatmap</div>
+                        <div class="heatmap-container">
+                            <svg width="100%" height="100%" viewBox="0 0 200 120" style="background: #f1f5f9;">
+                                <path d="M0,20 H200 M0,40 H200 M0,60 H200 M0,80 H200 M0,100 H200" stroke="#e2e8f0"
+                                    stroke-width="1" />
+                                <path
+                                    d="M20,0 V120 M40,0 V120 M60,0 V120 M80,0 V120 M100,0 V120 M120,0 V120 M140,0 V120 M160,0 V120 M180,0 V120"
+                                    stroke="#e2e8f0" stroke-width="1" />
+                                <rect x="50" y="30" width="100" height="60" fill="none" stroke="#cbd5e1"
+                                    stroke-width="2" />
+                                <polygon points="50,30 100,10 150,30" fill="none" stroke="#cbd5e1" stroke-width="2" />
+                                <circle cx="45" cy="75" r="12" fill="#ef4444" opacity="0.4" />
+                                <circle cx="45" cy="75" r="6" fill="#ef4444" />
+                                <circle cx="110" cy="85" r="10" fill="#f59e0b" opacity="0.4" />
+                                <circle cx="110" cy="85" r="5" fill="#f59e0b" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- External JS Link -->
+    <script src="../JavaScript/script.js"></script>
+</body>
+
+</html>

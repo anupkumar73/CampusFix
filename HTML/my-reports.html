@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Reports</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+
+<body>
+    <div class="card">
+        <h2>My Reports</h2>
+        <div class="tabs">
+            <button class="tab active">All</button>
+            <button class="tab">Pending</button>
+            <button class="tab">In Progress</button>
+            <button class="tab">Resolved</button>
+        </div>
+
+        <div class="report-item">
+            <div class="report-info">
+                <h4>CF109</h4>
+                <p>Electrical Problem in CSE Lab 2</p>
+                <span>Academic Block, 2nd Floor, CSE Lab 2</span>
+            </div>
+            <div class="report-tags">
+                <span class="tag-status critical"><span class="dot dot-red"></span> Critical</span>
+                <span class="tag-status progress"><span class="dot dot-yellow"></span> In Progress <i
+                        class="fa-solid fa-chevron-right chevron"></i></span>
+            </div>
+        </div>
+
+        <div class="report-item">
+            <div class="report-info">
+                <h4>CF102</h4>
+                <p>Wi-Fi not working</p>
+                <span>Academic Block, 2nd Floor, CSE Lab 2</span>
+            </div>
+            <div class="report-tags">
+                <span class="tag-status high"><span class="dot dot-yellow"></span> High</span>
+                <span class="tag-status resolved"><span class="dot dot-green"></span> Resolved <i
+                        class="fa-solid fa-chevron-right chevron"></i></span>
+            </div>
+        </div>
+
+        <div class="report-item">
+            <div class="report-info">
+                <h4>CF098</h4>
+                <p>Broken Classroom Fan</p>
+                <span>Room 204</span>
+            </div>
+            <div class="report-tags">
+                <span class="tag-status medium"><span class="dot dot-yellow"></span> Medium</span>
+                <span class="tag-status resolved"><span class="dot dot-green"></span> Resolved <i
+                        class="fa-solid fa-chevron-right chevron"></i></span>
+            </div>
+        </div>
+
+        <div class="subtitle" style="margin-top: 10px; text-align: center;">Can't find your issue? Check <a href="#resolved"
+                style="color:#1d4ed8; text-decoration:none; font-weight:600;">Resolved</a> or <a href="#"
+                style="color:#1d4ed8; text-decoration:none; font-weight:600;">Reopened</a>.</div>
+    </div>
+    <script src="../JavaScript/script.js"></script>
+</body>
+
+</html>
