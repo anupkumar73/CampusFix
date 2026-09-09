@@ -22,15 +22,15 @@
     <div class="Report-Container">
         <h2>Report a Campus Problem</h2>
         <form action="smart-analysis.html" method="get" id="reportForm">
-            <label for="problem-title">Problem Title:</label>
+            <label for="problem-title">Problem Title:</label><br>
             <input type="text" id="problem-title" name="problem-title" placeholder="Enter the problem title"
                 required><br><br>
 
-            <label for="problem-description">Problem Description:</label>
+            <label for="problem-description">Problem Description:</label><br>
             <textarea id="problem-description" name="problem-description" placeholder="Describe the problem in detail"
                 required></textarea><br><br>
 
-            <label for="Category">Category (Smart Suggestion):</label>
+            <label for="Category">Category (Smart Suggestion):</label><br>
             <select id="Category" name="Category" required>
                 <option value="">Select a category</option>
                 <option value="maintenance">Maintenance</option>
@@ -40,14 +40,15 @@
                 <option value="other">Other</option>
             </select><br><br>
 
-            <label for="location">Location:</label>
+            <label for="location">Location:</label><br>
             <input type="text" id="location" name="location" placeholder="Enter the location of the problem"
                 required><br><br>
 
-            <label for="image-upload">Upload Image (optional):</label>
+            <label for="image-upload">Upload Image (optional):</label><br>
             <input type="file" id="image-upload" name="image-upload"><br><br>
-
-            <button type="submit">Submit Report</button>
+            <div class="d-flex justify-content-center">
+                <button type="button submit" class="btn btn-success">Submit Report</button>
+            </div>
         </form>
     </div>
 

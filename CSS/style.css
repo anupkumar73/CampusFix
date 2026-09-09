@@ -914,3 +914,46 @@ h2 {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   border: 1px solid #e5e7eb;
 }
+
+.Report-Container {
+  display: grid;
+  place-items: center;
+  height: 69vh;
+  width: 20rem;
+  margin: auto;
+  margin-top: 10rem;
+  box-shadow: #ccc 10px 10px 10px 0px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  
+}
+
+.Report-Container h2 {
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 900;
+  color: #0d6e18;
+  padding-top: 5px;
+}
+
+.Report-Container label {
+  margin-left: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.Report-Container input {
+  margin-left: 0.5rem;
+  width: 32vw;
+}
+
+.Report-Container #problem-description {
+  margin-left: 0.5rem;
+  width: 32vw;
+}
+
+.Report-Container #Category {
+  margin-left: 0.5rem;
+}
+
+
