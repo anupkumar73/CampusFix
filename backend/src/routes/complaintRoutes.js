@@ -1,0 +1,14 @@
+const router=require("express").Router();
+const upload=require("../middleware/uploadMiddleware");
+const auth=require("../middleware/authMiddleware");
+const admin=require("../middleware/adminMiddleware");
+const c=require("../controllers/complaintController");
+router.post("/analyze",auth,upload.single("image"),c.analyzeComplaint);
+router.post("/",auth,c.createComplaint);
+router.get("/mine",auth,c.mine);
+router.get("/:ticketId",auth,c.getOne);
+router.patch("/:ticketId/status",auth,admin,c.updateStatus);
+router.patch("/:ticketId/assign",auth,admin,c.assign);
+router.post("/:ticketId/support",auth,c.support);
+router.post("/:ticketId/verify",auth,c.verify);
+module.exports=router;

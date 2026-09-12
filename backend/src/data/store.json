@@ -1,0 +1,223 @@
+{
+  "users": [
+    {
+      "id": "demo-user-1",
+      "name": "Anup Kumar",
+      "email": "anup@college.edu",
+      "role": "student",
+      "password": ""
+    },
+    {
+      "id": "demo-admin-1",
+      "name": "CampusFix Admin",
+      "email": "admin@campusfix.com",
+      "role": "admin",
+      "password": "admin123"
+    }
+  ],
+  "complaints": [
+    {
+      "_id": "seed109",
+      "ticketId": "CF109",
+      "reporterId": "demo-user-1",
+      "reporterName": "Anup Kumar",
+      "title": "Electrical Problem in CSE Lab 2",
+      "description": "Ceiling fan is not working and it is very hot in the lab.",
+      "category": "Electrical",
+      "location": "Academic Block, 2nd Floor, CSE Lab 2",
+      "priority": "Critical",
+      "severityScore": 95,
+      "assignedDepartment": "Electrical Maintenance",
+      "status": "In Progress",
+      "supportCount": 7,
+      "studentVerified": false,
+      "escalationLevel": 0,
+      "createdAt": "2026-09-12T08:31:12.739Z",
+      "updatedAt": "2026-09-12T10:11:12.739Z",
+      "timeline": [
+        {
+          "status": "Reported",
+          "note": "Complaint submitted",
+          "by": "demo-user-1",
+          "at": "2026-09-12T08:31:12.739Z"
+        },
+        {
+          "status": "Smart Analysis",
+          "note": "Electrical / Critical detected",
+          "by": "system",
+          "at": "2026-09-12T08:36:12.739Z"
+        },
+        {
+          "status": "Assigned",
+          "note": "Assigned to Electrical Maintenance",
+          "by": "demo-admin-1",
+          "at": "2026-09-12T08:51:12.739Z"
+        },
+        {
+          "status": "In Progress",
+          "note": "Technician assigned",
+          "by": "demo-admin-1",
+          "at": "2026-09-12T10:11:12.739Z"
+        }
+      ]
+    },
+    {
+      "_id": "seed102",
+      "ticketId": "CF102",
+      "reporterId": "demo-user-1",
+      "reporterName": "Anup Kumar",
+      "title": "Wi-Fi not working",
+      "description": "Wi-Fi connectivity is unavailable in CSE Lab 2.",
+      "category": "Wi-Fi / Network",
+      "location": "Academic Block, 2nd Floor, CSE Lab 2",
+      "priority": "High",
+      "severityScore": 78,
+      "assignedDepartment": "IT & Network",
+      "status": "Resolved",
+      "supportCount": 5,
+      "studentVerified": false,
+      "createdAt": "2026-09-12T05:31:12.739Z",
+      "updatedAt": "2026-09-12T08:31:12.739Z",
+      "timeline": [
+        {
+          "status": "Reported",
+          "note": "Complaint submitted",
+          "by": "demo-user-1",
+          "at": "2026-09-12T05:31:12.739Z"
+        },
+        {
+          "status": "Assigned",
+          "note": "Assigned to IT & Network",
+          "by": "demo-admin-1",
+          "at": "2026-09-12T06:31:12.739Z"
+        },
+        {
+          "status": "Resolved",
+          "note": "Network restored",
+          "by": "demo-admin-1",
+          "at": "2026-09-12T08:31:12.739Z"
+        }
+      ]
+    },
+    {
+      "_id": "seed098",
+      "ticketId": "CF098",
+      "reporterId": "demo-user-1",
+      "reporterName": "Anup Kumar",
+      "title": "Broken Classroom Fan",
+      "description": "Fan in Room 204 is not working.",
+      "category": "Electrical",
+      "location": "Room 204",
+      "priority": "Medium",
+      "severityScore": 75,
+      "assignedDepartment": "Electrical Maintenance",
+      "status": "Resolved",
+      "supportCount": 3,
+      "studentVerified": true,
+      "createdAt": "2026-09-11T10:31:12.739Z",
+      "updatedAt": "2026-09-11T22:31:12.739Z",
+      "timeline": [
+        {
+          "status": "Reported",
+          "note": "Complaint submitted",
+          "by": "demo-user-1",
+          "at": "2026-09-11T10:31:12.739Z"
+        },
+        {
+          "status": "Resolved",
+          "note": "Fan replaced",
+          "by": "demo-admin-1",
+          "at": "2026-09-11T22:31:12.739Z"
+        }
+      ]
+    },
+    {
+      "_id": "seed097",
+      "ticketId": "CF097",
+      "reporterId": "demo-user-1",
+      "reporterName": "Anup Kumar",
+      "title": "Water leakage near washroom",
+      "description": "Water is leaking near the washroom entrance.",
+      "category": "Water / Plumbing",
+      "location": "Academic Block, Ground Floor",
+      "priority": "High",
+      "severityScore": 78,
+      "assignedDepartment": "Plumbing & Water",
+      "status": "Assigned",
+      "supportCount": 2,
+      "studentVerified": false,
+      "createdAt": "2026-09-12T03:31:12.739Z",
+      "updatedAt": "2026-09-12T06:31:12.739Z",
+      "timeline": [
+        {
+          "status": "Reported",
+          "note": "Complaint submitted",
+          "by": "demo-user-1",
+          "at": "2026-09-12T03:31:12.739Z"
+        },
+        {
+          "status": "Assigned",
+          "note": "Assigned to Plumbing & Water",
+          "by": "demo-admin-1",
+          "at": "2026-09-12T06:31:12.739Z"
+        }
+      ]
+    },
+    {
+      "_id": "seed095",
+      "ticketId": "CF095",
+      "reporterId": "demo-user-1",
+      "reporterName": "Anup Kumar",
+      "title": "Garbage bin overflowing",
+      "description": "The waste bin near the cafeteria is overflowing.",
+      "category": "Cleanliness",
+      "location": "Main Cafeteria",
+      "priority": "Medium",
+      "severityScore": 48,
+      "assignedDepartment": "Housekeeping",
+      "status": "Reported",
+      "supportCount": 1,
+      "studentVerified": false,
+      "createdAt": "2026-09-12T00:31:12.739Z",
+      "updatedAt": "2026-09-12T00:31:12.739Z",
+      "timeline": [
+        {
+          "status": "Reported",
+          "note": "Complaint submitted",
+          "by": "demo-user-1",
+          "at": "2026-09-12T00:31:12.739Z"
+        }
+      ]
+    }
+  ],
+  "notifications": [
+    {
+      "_id": "seedn1",
+      "userId": "demo-user-1",
+      "title": "Complaint assigned",
+      "message": "Your issue CF109 has been assigned to Electrical Maintenance.",
+      "complaintId": "CF109",
+      "read": false,
+      "createdAt": "2026-09-12T10:26:12.739Z"
+    },
+    {
+      "_id": "seedn2",
+      "userId": "demo-user-1",
+      "title": "Issue resolved",
+      "message": "Your issue CF102 has been resolved.",
+      "complaintId": "CF102",
+      "read": false,
+      "createdAt": "2026-09-12T08:31:12.739Z"
+    },
+    {
+      "_id": "seedn3",
+      "userId": "demo-user-1",
+      "title": "Verify resolution",
+      "message": "Please verify the resolution for issue CF102.",
+      "complaintId": "CF102",
+      "read": false,
+      "createdAt": "2026-09-12T08:31:12.739Z"
+    }
+  ],
+  "feedback": []
+}

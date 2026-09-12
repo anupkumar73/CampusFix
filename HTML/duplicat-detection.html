@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Similar Issue Found</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+
+<body>
+    <div class="card">
+        <div class="warning-header">
+            <i class="fa-solid fa-triangle-exclamation warning-icon"></i>
+            <h2>Similar Issue Found</h2>
+            <div class="subtitle" style="margin-bottom:0;"><span id="dupMessage">A similar problem has already been reported.</span>
+            </div>
+        </div>
+
+        <div class="issue-box">
+            <div class="issue-title" id="dupTicket">Existing Issue</div>
+            <div class="issue-desc" id="dupDescription">Similar issue found</div>
+        </div>
+
+        <div class="field-group" style="margin-top: 8px;">
+            <div class="field-label">Reported By</div>
+            <div class="field-value" id="dupCount">0 students</div>
+        </div>
+        <div class="divider"></div>
+
+        <div class="field-group">
+            <div class="field-label">Status</div>
+            <div class="field-value" id="dupStatus"><span class="dot dot-yellow"></span> In Progress</div>
+        </div>
+
+        <div style="display:flex; flex-direction:column; gap:8px; margin-top:12px;">
+            <button class="btn-primary1" id="supportBtn">Support Existing Issue</button>
+            <button class="btn-secondary1" id="newIssueBtn">Submit as New Issue</button>
+        </div>
+    </div>
+    <script src="../JavaScript/api.js"></script><script src="../JavaScript/script.js"></script>
+</body>
+
+</html>

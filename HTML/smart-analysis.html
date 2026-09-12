@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Analysis</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+
+<body>
+    <div class="card">
+        <h2>Smart Analysis</h2>
+        <div class="subtitle">Our system has analyzed your problem.</div>
+        <div class="divider"></div>
+
+        <div class="field-group">
+            <div class="field-label">Category</div>
+            <div class="field-value" id="aiCategory">Analyzing...</div>
+        </div>
+        <div class="divider"></div>
+
+        <div class="field-group">
+            <div class="field-label">Location</div>
+            <div class="field-value" id="aiLocation">—</div>
+        </div>
+        <div class="divider"></div>
+
+        <div class="field-group">
+            <div class="field-label">Priority</div>
+            <div class="field-value" id="aiPriority"><span class="dot dot-red"></span> —</div>
+        </div>
+        <div class="divider"></div>
+
+        <div class="field-group">
+            <div class="field-label">Assigned Department</div>
+            <div class="field-value" id="aiDepartment"><i class="fa-solid fa-gear" style="font-size:11px; color:#4b5563;"></i> —</div>
+        </div>
+        <div class="divider"></div>
+
+        <div class="subtitle" style="margin-top: 8px; margin-bottom: 12px;">Please confirm the details before
+            submitting.</div>
+        <button class="btn-primary1" id="confirmBtn">Confirm & Submit</button>
+    </div>
+    <script src="../JavaScript/api.js"></script><script src="../JavaScript/script.js"></script><script>
+(function(){const data=JSON.parse(sessionStorage.getItem("campusfix_analysis")||"{}"),draft=JSON.parse(sessionStorage.getItem("campusfix_draft")||"{}"),a=data.analysis||{};document.getElementById("aiCategory").textContent=a.category||"Other";document.getElementById("aiLocation").textContent=draft.location||"Location not provided";document.getElementById("aiPriority").innerHTML='<span class="dot dot-red"></span> '+(a.priority||"Medium")+" ("+(a.severityScore||50)+"/100)";document.getElementById("aiDepartment").innerHTML='<i class="fa-solid fa-gear" style="font-size:11px;color:#4b5563;"></i> '+(a.assignedDepartment||"General Maintenance");document.getElementById("confirmBtn").addEventListener("click",async function(){const b=this;b.disabled=true;b.textContent="Submitting...";try{const created=await createReport({...draft,category:a.category,priority:a.priority,severityScore:a.severityScore,assignedDepartment:a.assignedDepartment,duplicateOf:data.duplicate?.found?data.duplicate.ticketId:null});sessionStorage.setItem("campusfix_created",JSON.stringify(created));if(data.duplicate?.found){sessionStorage.setItem("campusfix_duplicate",JSON.stringify(data.duplicate));location.href="duplicat-detection.html"}else location.href="success.html"}catch(e){alert(e.message);b.disabled=false;b.textContent="Confirm & Submit"}})})();</script>
+</body>
+
+</html>
