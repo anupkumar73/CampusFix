@@ -15,7 +15,7 @@ Open `http://localhost:5000/`.
 
 No MongoDB is required for the demo. If `MONGO_URI` is not set, CampusFix uses `backend/data/store.json` and persists demo data across server restarts.
 
-[[Live](https://campusfix-diu7.onrender.com)]
+[Live](https://campusfix-diu7.onrender.com)
 
 ## Demo login
 
