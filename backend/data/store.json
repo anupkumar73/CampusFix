@@ -20,6 +20,13 @@
       "email": "anupkumar.work.online@gmail.com",
       "role": "student",
       "password": "zxa"
+    },
+    {
+      "id": "demo-user-1",
+      "name": "dc",
+      "email": "dc",
+      "role": "student",
+      "password": "xc"
     }
   ],
   "complaints": [

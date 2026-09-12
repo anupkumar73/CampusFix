@@ -27,17 +27,20 @@ app.use(express.urlencoded({ extended: true }));
 app.use(morgan("dev"));
 
 const projectRoot = path.join(__dirname, "..", "..");
+const frontendRoot = path.join(projectRoot, "frontend");
 const uploadsDir = path.join(__dirname, "..", "uploads");
 fs.mkdirSync(uploadsDir, { recursive: true });
 
 app.use("/uploads", express.static(uploadsDir));
-app.use(express.static(projectRoot));
+app.use(express.static(frontendRoot));
 
 // The design stores pages inside HTML/, while navigation uses /page.html.
 app.get("/:page.html", (req, res, next) => {
   const safePage = path.basename(req.params.page);
-  const filePath = path.join(projectRoot, "HTML", `${safePage}.html`);
+  const filePath = path.join(frontendRoot, "HTML", `${safePage}.html`);
+
   if (!fs.existsSync(filePath)) return next();
+
   res.sendFile(filePath);
 });
 
@@ -53,7 +56,9 @@ app.use("/api/notifications", require("./routes/notificationRoutes"));
 app.use("/api/admin", require("./routes/adminRoutes"));
 app.use("/api/feedback", require("./routes/feedbackRoutes"));
 
-app.get("/", (_, res) => res.sendFile(path.join(projectRoot, "HTML", "index.html")));
+app.get("/", (_, res) =>
+  res.sendFile(path.join(frontendRoot, "HTML", "index.html"))
+);
 
 io.on("connection", socket => {
   console.log("Realtime client connected:", socket.id);

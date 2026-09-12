@@ -64,7 +64,7 @@ a {
   height: 40vh;
   border-top: 2px solid #a2a7a2;
   background-color: #87d9dfc0;
-  background-image: url("/image/campus-image.png");
+  background-image: url("../image/campus-image.png");
   background-size: 64rem 20rem;
   background-position: right center;
   background-repeat: no-repeat;
