@@ -27,6 +27,13 @@
       "email": "dc",
       "role": "student",
       "password": "xc"
+    },
+    {
+      "id": "demo-user-1",
+      "name": "raajkashyap0045",
+      "email": "raajkashyap0045@gmail.com",
+      "role": "student",
+      "password": "eefe"
     }
   ],
   "complaints": [

@@ -1,11 +1,14 @@
+# IMPORTED LIBRARIES – Project mein use hone wali libraries
 import streamlit as ui
 import sqlite3
 import datetime
 from difflib import get_close_matches
 
+# PAGE CONFIGURATION – App ka title, icon aur layout set karna
 # Page configuration
 ui.set_page_config(page_title="CampusBot Pro - BRCM CET", page_icon="🎓", layout="centered")
 
+# CUSTOM UI STYLING – App ko modern aur attractive look dene ke liye CSS
 # Custom UI Styling (Modern Gradients, Glowing Headers & Sleek Bubbles)
 ui.markdown("""
     <style>
@@ -37,10 +40,12 @@ ui.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
+# HEADER SECTION – App ke top par project ka naam aur description
 # Header Section
 ui.markdown('<div class="main-header">🎓 CampusBot Pro</div>', unsafe_allow_html=True)
 ui.markdown('<div class="sub-header">Official AI Assistant for BRCM College of Engineering & Technology</div>', unsafe_allow_html=True)
 
+# SIDEBAR CONFIGURATION – Sidebar mein quick navigation buttons
 # ----------------------------------------------------
 # SIDEBAR CONFIGURATION
 # ----------------------------------------------------
@@ -77,6 +82,7 @@ with ui.sidebar:
     ui.markdown("### 🚨 **Emergency Helpdesk**")
     ui.info("📞 **Admission Helpline:**\n+91-80599-00247")
 
+# DATABASE SETUP (SQLITE) – User ki queries ko database mein store karna
 # ----------------------------------------------------
 # DATABASE SETUP (SQLite)
 # ----------------------------------------------------
@@ -104,6 +110,7 @@ def log_inquiry(query, intent):
 
 init_db()
 
+# SERVICE RENDER FUNCTIONS – Har service ka UI/display yahan banaya gaya hai
 # ----------------------------------------------------
 # INDIVIDUAL SERVICE RENDER FUNCTIONS
 # ----------------------------------------------------
@@ -166,6 +173,7 @@ def render_hostel_details():
     | **TOTAL** | **Combined** | **1,119** |
     """)
 
+# SPECIFIC HOSTEL FUNCTIONS – Alag-alag hostels ki details show karna
 # --- Specific Hostel Render Functions ---
 def render_bhabha_hostel():
     ui.markdown("### 🏛️ **Bhabha Hostel (Boys)**")
@@ -208,6 +216,7 @@ def render_aryabhatt_hostel():
     * 👨‍💼 **Category:** Boys Hostel with solar hot water and R.O. drinking water.
     """)
 
+# HOSTEL SELECTION OPTIONS – User ko hostel select karne ke buttons
 # --- Hostel Selection Options Function ---
 def render_hostel_options():
     ui.markdown("### 🏢 **Hostel Directory**")
@@ -241,6 +250,7 @@ def render_hostel_options():
             ui.session_state.messages.append({"role": "assistant", "content": "__RENDER_HOSTEL_GENERAL__"})
             ui.rerun()
 
+# MESS DETAILS – Mess ke breakfast, lunch aur dinner timings
 def render_mess_details():
     ui.markdown("### 🍽️ **Anpurna Mess**")
     ui.markdown("""
@@ -249,6 +259,7 @@ def render_mess_details():
     * 🌙 **Dinner:** `07:30 PM - 08:30 PM`
     """)
 
+# BUS ROUTES & TIMINGS – College bus routes ko tabs mein show karna
 def render_bus_routes():
     ui.markdown("### 🚌 **BRCM College Bus Routes & Timings**")
     ui.info("⏰ **Note:** Return buses leave from BRCM Campus at **04:00 PM** for all routes.")
@@ -314,6 +325,7 @@ def render_bus_routes():
         | **BRCM CAMPUS** | **08:35 AM** |
         """)
 
+# CONTACT & ALUMNI DETAILS – Contact aur alumni office ki information
 def render_contact_details():
     ui.markdown("### 📞 **Contact Us & Alumni Office**")
     ui.info("📞 **Admission Helpline Number:** +91-80599-00247")
@@ -321,6 +333,7 @@ def render_contact_details():
     ui.write("📍 **Office:** Computer Science Block, BRCM College, Bahal- Haryana (127028)")
     ui.write("📧 **Alumni Email:** alumni@brcm.edu.in")
 
+# GOVERNANCE & LEADERSHIP – College ke management/leadership details
 def render_governance_details():
     ui.markdown("### 🏛️ **Governance & Leadership**")
     ui.markdown("""
@@ -331,6 +344,7 @@ def render_governance_details():
     | **Principal** | Dr. Anuj Kumar Sharma |
     """)
 
+# BARBER SHOP DETAILS – Barber service ki information
 def render_barber_details():
     ui.markdown("### 💈 **Barber Shop**")
     ui.markdown("""
@@ -339,6 +353,7 @@ def render_barber_details():
     * ⏰ **Timings:** `05:00 PM - 07:00 PM` (All Days)
     """)
 
+# LAUNDRY SERVICE DETAILS – Laundry service ki information
 def render_laundry_details():
     ui.markdown("### 🧺 **Laundry Service**")
     ui.markdown("""
@@ -346,6 +361,7 @@ def render_laundry_details():
     * ⏰ **Timings:** `09:00 AM - 10:00 AM` & `04:00 PM - 07:00 PM`
     """)
 
+# CANTEEN DETAILS – Canteen ki information aur menu
 def render_canteen_details():
     ui.markdown("### 🍔 **BRCM Canteen**")
     ui.markdown("""
@@ -363,6 +379,7 @@ def render_canteen_details():
     | **Veg Maggie** | ₹50 | **Pasta** | ₹150 |
     """)
 
+# ELECTRICAL ENGINEERING HOD – EE department ke HOD ki details
 def render_ee_hod_details():
     ui.markdown("### ⚡ **Electrical Engineering Department**")
     ui.markdown("""
@@ -370,6 +387,7 @@ def render_ee_hod_details():
     * 📧 **Email:** `hodee@brcm.edu.in` | 📱 **Phone:** `8059900249`
     """)
 
+# CIVIL ENGINEERING HOD – CE department ke HOD ki details
 def render_ce_hod_details():
     ui.markdown("### 🏗️ **Civil Engineering Department**")
     ui.markdown("""
@@ -377,6 +395,7 @@ def render_ce_hod_details():
     * 📧 **Email:** `hodce@brcm.edu.in` | 📱 **Phone:** `8059900244`
     """)
 
+# COMPUTER SCIENCE ENGINEERING HOD – CSE department ke HOD ki details
 def render_cse_hod_details():
     ui.markdown("### 💻 **Computer Science Engineering Department**")
     ui.markdown("""
@@ -384,6 +403,7 @@ def render_cse_hod_details():
     * 📧 **Email:** `hodcse@brcm.edu.in` | 📱 **Phone:** `8059900250`
     """)
 
+# STUDENT RULES & POLICIES – Students ke rules aur policies
 def render_rules_details():
     ui.markdown("### 📋 **BRCM Student Code of Conduct & Policies**")
     ui.markdown("""
@@ -393,6 +413,7 @@ def render_rules_details():
     * **Hostel Timings:** Late night entry without prior written permission is strictly banned.
     """)
 
+# HOD SELECTION OPTIONS – Branch choose karke HOD details dekhna
 def render_hod_options():
     ui.markdown("### 👨‍🏫 **Head of Department (HOD) Directory**")
     ui.write("Aap kis branch ke HOD ke baare mein janna chahte hain? Neeche diye gaye options par click karein:")
@@ -414,6 +435,7 @@ def render_hod_options():
             ui.session_state.messages.append({"role": "assistant", "content": "__RENDER_EE_HOD__"})
             ui.rerun()
 
+# KNOWLEDGE BASE & KEYWORDS – Bot ki information aur keyword mapping
 # ----------------------------------------------------
 # KNOWLEDGE BASE & KEYWORDS
 # ----------------------------------------------------
@@ -449,8 +471,10 @@ KEYWORDS_MAP = {
     "hod": ["hod", "head of department", "department head"]
 }
 
+# COLLEGE KEYWORDS – General college queries ko identify karne ke keywords
 college_keywords = ["college", "brcm", "about", "history", "university"]
 
+# INTENT RESPONSE HANDLER – Detected intent ke according response select karna
 def execute_intent_response(query, intent):
     log_inquiry(query, intent)
     render_map = {
@@ -479,6 +503,7 @@ def execute_intent_response(query, intent):
         return render_map[intent], intent
     return KNOWLEDGE_BASE.get(intent, "Information unavailable."), intent
 
+# MAIN CHATBOT LOGIC / INTENT DETECTION – User ki query samajhkar intent detect karna
 def get_bot_response(user_query):
     query_clean = user_query.lower()
     query_words = query_clean.split()
@@ -502,6 +527,7 @@ def get_bot_response(user_query):
     log_inquiry(user_query, "unknown")
     return "🤖 I couldn't find an exact match. Try asking about 'warden', 'rules', 'mess', 'canteen', or check the sidebarbuttons!", "unknown"
 
+# CHAT INTERFACE RENDERING – Chat history aur bot responses ko screen par dikhana
 # ----------------------------------------------------
 # CHAT INTERFACE RENDERING
 # ----------------------------------------------------
@@ -556,6 +582,7 @@ for msg in ui.session_state.messages:
         else:
             ui.write(content)
 
+# QUICK SUGGESTION BUTTONS – Common questions ke shortcut buttons
 # Quick Suggestion Pill Buttons above Input
 ui.markdown("⚡ **Quick Suggestions:**")
 cols = ui.columns(4)
@@ -580,6 +607,7 @@ with cols[3]:
         ui.session_state.messages.append({"role": "assistant", "content": "__RENDER_CANTEEN__"})
         ui.rerun()
 
+# USER CHAT INPUT & MESSAGE PROCESSING – User ka message lena aur process karna
 # User Chat Input
 user_input = ui.chat_input("Ask about Rules, Mess, Canteen, Warden, Bus routes, Hostels, HODs, etc.")
 
