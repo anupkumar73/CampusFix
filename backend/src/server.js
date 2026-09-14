@@ -1,4 +1,3 @@
-
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
@@ -44,11 +43,13 @@ app.get("/:page.html", (req, res, next) => {
   res.sendFile(filePath);
 });
 
-app.get("/api/health", (_, res) => res.json({
-  ok: true,
-  service: "CampusFix API",
-  mode: global.__campusfixMongo ? "mongodb" : "demo-memory-persistent"
-}));
+app.get("/api/health", (_, res) =>
+  res.json({
+    ok: true,
+    service: "CampusFix API",
+    mode: global.__campusfixMongo ? "mongodb" : "demo-memory-persistent",
+  }),
+);
 
 app.use("/api/auth", require("./routes/authRoutes"));
 app.use("/api/complaints", require("./routes/complaintRoutes"));
@@ -57,23 +58,34 @@ app.use("/api/admin", require("./routes/adminRoutes"));
 app.use("/api/feedback", require("./routes/feedbackRoutes"));
 
 app.get("/", (_, res) =>
-  res.sendFile(path.join(frontendRoot, "HTML", "index.html"))
+  res.sendFile(path.join(frontendRoot, "HTML", "index.html")),
 );
 
-io.on("connection", socket => {
+io.on("connection", (socket) => {
   console.log("Realtime client connected:", socket.id);
-  socket.on("join:user", userId => socket.join(`user:${userId}`));
+  socket.on("join:user", (userId) => socket.join(`user:${userId}`));
 });
 
-app.use((req, res) => res.status(404).json({ message: `Not found: ${req.method} ${req.originalUrl}` }));
+app.use((req, res) =>
+  res
+    .status(404)
+    .json({ message: `Not found: ${req.method} ${req.originalUrl}` }),
+);
 app.use((err, req, res, next) => {
   console.error(err);
-  res.status(err.status || 500).json({ message: err.message || "Internal server error" });
+  res
+    .status(err.status || 500)
+    .json({ message: err.message || "Internal server error" });
 });
 
 async function start() {
   global.__campusfixMongo = await connectDB();
   const port = Number(process.env.PORT || 5000);
-  server.listen(port, () => console.log(`CampusFix running at http://localhost:${port}`));
+  server.listen(port, () =>
+    console.log(`CampusFix running at http://localhost:${port}`),
+  );
 }
-start().catch(err => { console.error(err); process.exit(1); });
+start().catch((err) => {
+  console.error(err);
+  process.exit(1);
+});

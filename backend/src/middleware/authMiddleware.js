@@ -1,4 +1,3 @@
-
 const jwt = require("jsonwebtoken");
 const store = require("../config/store");
 
@@ -9,7 +8,7 @@ function authMiddleware(req, res, next) {
   if (!token) {
     const data = store.load();
     const id = req.headers["x-demo-user"] || "demo-user-1";
-    const found = data.users.find(u => u.id === id);
+    const found = data.users.find((u) => u.id === id);
     req.user = found
       ? { id: found.id, role: found.role, name: found.name, email: found.email }
       : { id, role: "student", name: "Anup Kumar", email: "anup@college.edu" };

@@ -1,147 +1,206 @@
 <!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CampusFix | Smart Campus Problem Resolver</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="../CSS/style.css">
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../CSS/style.css" />
+  </head>
 
-</head>
-
-<body>
+  <body>
     <header>
-        <nav>
-            <a href="index.html">
-                <img src="../image/campusfix-logo.png" alt="CampusFix Logo" />
-            </a>
+      <nav>
+        <a href="index.html">
+          <img src="../image/campusfix-logo.png" alt="CampusFix Logo" />
+        </a>
 
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#how-it-works">How it Works</a></li>
-                <li><a href="#campusbot">About</a></li>
-                <li><a href="login.html">Login</a></li>
-            </ul>
-
-        </nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#how-it-works">How it Works</a></li>
+          <li><a href="#campusbot">About</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
     </header>
 
     <div class="hero">
-        <h2>Fix Your Campus. <br> One Report at a Time.</h2>
-        <p>
-            Report campus problems easily <br> and track them until they're resolved.
-        </p>
-        <button class="btn-primary"><a href="login.html"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#f6f4f4"><path d="M440-280h80v-160h160v-80H520v-160h-80v160H280v80h160v160Zm40 200q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg> Report a Problem</a></button>
-        <button class="btn-secondary" onclick="window.location.href='login.html'"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#086006"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg> Track My Reports</button>
+      <h2>
+        Fix Your Campus. <br />
+        One Report at a Time.
+      </h2>
+      <p>
+        Report campus problems easily <br />
+        and track them until they're resolved.
+      </p>
+      <button class="btn-primary">
+        <a href="login.html"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="#f6f4f4"
+          >
+            <path
+              d="M440-280h80v-160h160v-80H520v-160h-80v160H280v80h160v160Zm40 200q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"
+            />
+          </svg>
+          Report a Problem</a
+        >
+      </button>
+      <button
+        class="btn-secondary"
+        onclick="window.location.href = 'login.html'"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="24px"
+          viewBox="0 -960 960 960"
+          width="24px"
+          fill="#086006"
+        >
+          <path
+            d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"
+          />
+        </svg>
+        Track My Reports
+      </button>
     </div>
 
     <div class="statistics">
+      <div class="stat-row stat">
+        <h2 class="green">0+</h2>
+        <p>Students</p>
+      </div>
+      <div class="stat-row stat">
+        <h2>0+</h2>
+        <p>Issues Reported</p>
+      </div>
 
-        <div class="stat-row stat">
-            <h2 class="green">0+</h2>
-            <p>Students</p>
-        </div>
-        <div class="stat-row stat">
-            <h2>0+</h2>
-            <p>Issues Reported</p>
-        </div>
-
-
-        <div class="stat-row stat">
-            <h2>0+</h2>
-            <p>Issues Resolved</p>
-        </div>
-        <div class="stat-row stat">
-            <h2>0%</h2>
-            <p>Campuses Covered</p>
-        </div>
-
+      <div class="stat-row stat">
+        <h2>0+</h2>
+        <p>Issues Resolved</p>
+      </div>
+      <div class="stat-row stat">
+        <h2>0%</h2>
+        <p>Campuses Covered</p>
+      </div>
     </div>
 
     <div class="campusbot" id="campusBot">
-
-        <button class="campusbot-btn" id="campusBotBtn">
-            🤖
-        </button>
-
+      <button class="campusbot-btn" id="campusBotBtn">🤖</button>
     </div>
 
     <div class="campusbot-window" id="campusBotWindow">
+      <div class="campusbot-header">
+        <button id="closeBot">×</button>
+      </div>
 
-        <div class="campusbot-header">
-            <button id="closeBot">×</button>
-        </div>
-
-        <iframe src="https://campusfix-zu43.onrender.com">
-        </iframe>
-
+      <iframe src="https://campusfix-zu43.onrender.com"> </iframe>
     </div>
 
     <section class="how-it-works" id="how-it-works">
-        <h2>How It Works</h2>
-        <div class="step">
-
-
-            <div class="icon">
-                <div class="icons">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#4516c5"><path d="M80 0v-160h800V0H80Zm504-480L480-584 320-424l103 104 161-160Zm-47-160 103 103 160-159-104-104-159 160Zm-84-29 216 216-189 190q-24 24-56.5 24T367-263l-27 23H140l126-125q-24-24-25-57.5t23-57.5l189-189Zm0 0 187-187q24-24 56.5-24t56.5 24l104 103q24 24 24 56.5T857-640L669-453 453-669Z"/></svg>
-                </div>
-                <h2>1. Report</h2>
-                <p>Submit your campus issue with details.</p>
-            </div>
-
-            <div class="arrow">&rarr;</div>
-
-
-            <div class="icon">
-                <div class="icons">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#086006"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>
-                </div>
-                <h2>2. Track</h2>
-                <p>Monitor the status in real-time.</p>
-            </div>
-
-            <div class="arrow">&rarr;</div>
-
-
-            <div class="icon">
-                <div class="icons">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#380ecd"><path d="m370-80-16-128q-13-5-24.5-12T307-235l-119 50L78-375l103-78q-1-7-1-13.5v-27q0-6.5 1-13.5L78-585l110-190 119 50q11-8 23-15t24-12l16-128h220l16 128q13 5 24.5 12t22.5 15l119-50 110 190-103 78q1 7 1 13.5v27q0 6.5-2 13.5l103 78-110 190-118-50q-11 8-23 15t-24 12L590-80H370Zm112-260q58 0 99-41t41-99q0-58-41-99t-99-41q-59 0-99.5 41T342-480q0 58 40.5 99t99.5 41Z"/></svg>
-                </div>
-                <h2>3. Resolve</h2>
-                <p>Our team takes action and fixes it.</p>
-            </div>
-
-            <div class="arrow">&rarr;</div>
-
-
-            <div class="icon">
-                <div class="icons">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#0742f2"><path d="M268-240 42-466l57-56 170 170 56 56-57 56Zm226 0L268-466l56-57 170 170 368-368 56 57-424 424Zm0-226-57-56 198-198 57 56-198 198Z"/></svg>
-                </div>
-                <h2>4. Get Notified</h2>
-                <p>Receive updates until it's solved.</p>
-            </div>
-
-
+      <h2>How It Works</h2>
+      <div class="step">
+        <div class="icon">
+          <div class="icons">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#4516c5"
+            >
+              <path
+                d="M80 0v-160h800V0H80Zm504-480L480-584 320-424l103 104 161-160Zm-47-160 103 103 160-159-104-104-159 160Zm-84-29 216 216-189 190q-24 24-56.5 24T367-263l-27 23H140l126-125q-24-24-25-57.5t23-57.5l189-189Zm0 0 187-187q24-24 56.5-24t56.5 24l104 103q24 24 24 56.5T857-640L669-453 453-669Z"
+              />
+            </svg>
+          </div>
+          <h2>1. Report</h2>
+          <p>Submit your campus issue with details.</p>
         </div>
+
+        <div class="arrow">&rarr;</div>
+
+        <div class="icon">
+          <div class="icons">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#086006"
+            >
+              <path
+                d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"
+              />
+            </svg>
+          </div>
+          <h2>2. Track</h2>
+          <p>Monitor the status in real-time.</p>
+        </div>
+
+        <div class="arrow">&rarr;</div>
+
+        <div class="icon">
+          <div class="icons">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#380ecd"
+            >
+              <path
+                d="m370-80-16-128q-13-5-24.5-12T307-235l-119 50L78-375l103-78q-1-7-1-13.5v-27q0-6.5 1-13.5L78-585l110-190 119 50q11-8 23-15t24-12l16-128h220l16 128q13 5 24.5 12t22.5 15l119-50 110 190-103 78q1 7 1 13.5v27q0 6.5-2 13.5l103 78-110 190-118-50q-11 8-23 15t-24 12L590-80H370Zm112-260q58 0 99-41t41-99q0-58-41-99t-99-41q-59 0-99.5 41T342-480q0 58 40.5 99t99.5 41Z"
+              />
+            </svg>
+          </div>
+          <h2>3. Resolve</h2>
+          <p>Our team takes action and fixes it.</p>
+        </div>
+
+        <div class="arrow">&rarr;</div>
+
+        <div class="icon">
+          <div class="icons">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#0742f2"
+            >
+              <path
+                d="M268-240 42-466l57-56 170 170 56 56-57 56Zm226 0L268-466l56-57 170 170 368-368 56 57-424 424Zm0-226-57-56 198-198 57 56-198 198Z"
+              />
+            </svg>
+          </div>
+          <h2>4. Get Notified</h2>
+          <p>Receive updates until it's solved.</p>
+        </div>
+      </div>
     </section>
 
     <footer>
-        <h4>&hearts; A cleaner, safer and better campus</h4>
-        <p>-Powered by students for students-</p>
+      <h4>&hearts; A cleaner, safer and better campus</h4>
+      <p>-Powered by students for students-</p>
     </footer>
 
     <script src="../JavaScript/script.js"></script>
-</body>
-
+  </body>
 </html>

@@ -134,7 +134,6 @@ a {
   flex-direction: column;
   margin: 1rem;
   align-items: center;
-
 }
 
 .green {
@@ -148,29 +147,29 @@ a {
 }
 
 .how-it-works {
-    text-align: center;
+  text-align: center;
 }
 
 .step {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    background-color: #d6d2e42b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  background-color: #d6d2e42b;
 }
 
 .icon {
-    text-align: center;
+  text-align: center;
 }
 
 .icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .icons svg {
-    display: block;
+  display: block;
 }
 
 footer {
@@ -185,8 +184,6 @@ footer h4 {
   font-size: 1rem;
   margin-bottom: 1px;
 }
-
-
 
 /* ===== bot.css ===== */
 .campusbot {
@@ -961,7 +958,6 @@ h2 {
   box-shadow: #ccc 10px 10px 10px 0px;
   background-color: #ffffff;
   border-radius: 10px;
-  
 }
 
 .Report-Container h2 {
@@ -988,442 +984,418 @@ h2 {
 
 /* ---------- Large Tablets / Small Laptops ---------- */
 @media (max-width: 1200px) {
+  header nav ul li {
+    margin: 0 12px;
+    font-size: 15px;
+  }
 
-    header nav ul li {
-        margin: 0 12px;
-        font-size: 15px;
-    }
+  nav img {
+    width: 18vw;
+  }
 
-    nav img {
-        width: 18vw;
-    }
+  .hero {
+    background-size: cover;
+    background-position: center;
+  }
 
-    .hero {
-        background-size: cover;
-        background-position: center;
-    }
+  .step {
+    gap: 20px;
+  }
 
-    .step {
-        gap: 20px;
-    }
-
-    .campusbot-window {
-        width: 380px;
-        height: 550px;
-    }
+  .campusbot-window {
+    width: 380px;
+    height: 550px;
+  }
 }
-
 
 /* ---------- Tablets ---------- */
 @media (max-width: 992px) {
+  header nav {
+    width: 95vw;
+  }
 
-    header nav {
-        width: 95vw;
-    }
+  header nav ul li {
+    margin: 0 8px;
+    font-size: 14px;
+  }
 
-    header nav ul li {
-        margin: 0 8px;
-        font-size: 14px;
-    }
+  nav img {
+    width: 20vw;
+  }
 
-    nav img {
-        width: 20vw;
-    }
+  .hero {
+    height: auto;
+    min-height: 40vh;
+    padding: 30px 20px;
+    background-size: cover;
+    background-position: center;
+  }
 
-    .hero {
-        height: auto;
-        min-height: 40vh;
-        padding: 30px 20px;
-        background-size: cover;
-        background-position: center;
-    }
+  .hero h2 {
+    font-size: 2.2rem;
+  }
 
-    .hero h2 {
-        font-size: 2.2rem;
-    }
+  .hero p {
+    font-size: 1.1rem;
+  }
 
-    .hero p {
-        font-size: 1.1rem;
-    }
+  .statistics {
+    flex-wrap: wrap;
+  }
 
-    .statistics {
-        flex-wrap: wrap;
-    }
+  .stat-row {
+    width: 9rem;
+  }
 
-    .stat-row {
-        width: 9rem;
-    }
+  /* How It Works */
+  .step {
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 20px;
+  }
 
-    /* How It Works */
-    .step {
-        flex-wrap: wrap;
-        gap: 25px;
-        padding: 20px;
-    }
+  .icon {
+    min-width: 150px;
+  }
 
-    .icon {
-        min-width: 150px;
-    }
+  .arrow {
+    font-size: 25px;
+  }
 
-    .arrow {
-        font-size: 25px;
-    }
+  .profile-card {
+    width: 80%;
+  }
 
-    .profile-card {
-        width: 80%;
-    }
-
-    .campusbot-window {
-        width: 350px;
-        height: 500px;
-    }
+  .campusbot-window {
+    width: 350px;
+    height: 500px;
+  }
 }
-
 
 /* ---------- Mobile Devices ---------- */
 @media (max-width: 768px) {
+  /* Header */
+  header {
+    width: 100%;
+  }
 
-    /* Header */
-    header {
-        width: 100%;
-    }
+  header nav {
+    width: 95%;
+    margin: 8px auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
 
-    header nav {
-        width: 95%;
-        margin: 8px auto;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
+  header nav ul {
+    flex-wrap: wrap;
+    padding: 0;
+  }
 
-    header nav ul {
-        flex-wrap: wrap;
-        padding: 0;
-    }
+  header nav ul li {
+    margin: 5px 8px;
+    font-size: 13px;
+  }
 
-    header nav ul li {
-        margin: 5px 8px;
-        font-size: 13px;
-    }
+  nav img {
+    width: 35vw;
+    height: auto;
+  }
 
-    nav img {
-        width: 35vw;
-        height: auto;
-    }
+  /* Hero */
+  .hero {
+    height: auto;
+    min-height: 45vh;
+    padding: 25px 15px;
+    background-size: cover;
+    background-position: center;
+  }
 
+  .hero h2 {
+    font-size: 1.8rem;
+    margin: 1rem;
+  }
 
-    /* Hero */
-    .hero {
-        height: auto;
-        min-height: 45vh;
-        padding: 25px 15px;
-        background-size: cover;
-        background-position: center;
-    }
+  .hero p {
+    font-size: 1rem;
+    margin: 1rem;
+  }
 
-    .hero h2 {
-        font-size: 1.8rem;
-        margin: 1rem;
-    }
+  .btn-primary,
+  .btn-secondary {
+    font-size: 14px;
+    padding: 8px 14px;
+  }
 
-    .hero p {
-        font-size: 1rem;
-        margin: 1rem;
-    }
+  /* Statistics */
+  .statistics {
+    flex-wrap: wrap;
+    padding: 10px;
+  }
 
-    .btn-primary,
-    .btn-secondary {
-        font-size: 14px;
-        padding: 8px 14px;
-    }
+  .stat-row {
+    width: 42%;
+    margin: 8px;
+  }
 
+  .stat h2 {
+    font-size: 1.5rem;
+  }
 
-    /* Statistics */
-    .statistics {
-        flex-wrap: wrap;
-        padding: 10px;
-    }
+  /* How It Works */
+  .how-it-works {
+    padding: 20px 10px;
+  }
 
-    .stat-row {
-        width: 42%;
-        margin: 8px;
-    }
+  .how-it-works > h2 {
+    font-size: 1.8rem;
+  }
 
-    .stat h2 {
-        font-size: 1.5rem;
-    }
+  .step {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
 
+  .icon {
+    width: 100%;
+    text-align: center;
+  }
 
-    /* How It Works */
-    .how-it-works {
-        padding: 20px 10px;
-    }
+  .icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
 
-    .how-it-works > h2 {
-        font-size: 1.8rem;
-    }
+  .icons svg {
+    width: 40px;
+    height: 40px;
+  }
 
-    .step {
-        flex-direction: column;
-        gap: 10px;
-        padding: 10px;
-    }
+  .icon h2 {
+    font-size: 1.3rem;
+    margin: 8px 0;
+  }
 
-    .icon {
-        width: 100%;
-        text-align: center;
-    }
+  .icon p {
+    font-size: 0.9rem;
+  }
 
-    .icons {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
+  /* Arrow vertical on mobile */
+  .arrow {
+    transform: rotate(90deg);
+    font-size: 25px;
+    margin: 5px 0;
+  }
 
-    .icons svg {
-        width: 40px;
-        height: 40px;
-    }
+  /* Login */
+  .login-container {
+    width: 90%;
+    max-width: 20rem;
+    height: auto;
+    min-height: 60vh;
+    margin-top: 5rem;
+    padding: 20px;
+  }
 
-    .icon h2 {
-        font-size: 1.3rem;
-        margin: 8px 0;
-    }
+  .login-container h1 {
+    font-size: 2rem;
+  }
 
-    .icon p {
-        font-size: 0.9rem;
-    }
+  /* Profile */
+  .profile-card {
+    width: 90%;
+    height: auto;
+    margin-top: 5rem;
+  }
 
-    /* Arrow vertical on mobile */
-    .arrow {
-        transform: rotate(90deg);
-        font-size: 25px;
-        margin: 5px 0;
-    }
+  .profile-top {
+    flex-direction: column;
+  }
 
+  .stats-box {
+    margin-left: 0;
+    margin-top: 15px;
+  }
 
-    /* Login */
-    .login-container {
-        width: 90%;
-        max-width: 20rem;
-        height: auto;
-        min-height: 60vh;
-        margin-top: 5rem;
-        padding: 20px;
-    }
+  /* General Cards */
+  .card {
+    width: 90%;
+    height: auto;
+    min-height: 60vh;
+    margin-top: 5rem;
+  }
 
-    .login-container h1 {
-        font-size: 2rem;
-    }
+  .Report-Container {
+    width: 90%;
+    height: auto;
+    min-height: 60vh;
+    margin-top: 5rem;
+    padding: 15px;
+  }
 
+  .Report-Container input,
+  .Report-Container #problem-description {
+    width: 90%;
+    margin-left: 0;
+  }
 
-    /* Profile */
-    .profile-card {
-        width: 90%;
-        height: auto;
-        margin-top: 5rem;
-    }
+  /* Chatbot */
+  .campusbot {
+    left: 10px;
+    top: auto;
+    bottom: 20px;
+  }
 
-    .profile-top {
-        flex-direction: column;
-    }
-
-    .stats-box {
-        margin-left: 0;
-        margin-top: 15px;
-    }
-
-
-    /* General Cards */
-    .card {
-        width: 90%;
-        height: auto;
-        min-height: 60vh;
-        margin-top: 5rem;
-    }
-
-    .Report-Container {
-        width: 90%;
-        height: auto;
-        min-height: 60vh;
-        margin-top: 5rem;
-        padding: 15px;
-    }
-
-    .Report-Container input,
-    .Report-Container #problem-description {
-        width: 90%;
-        margin-left: 0;
-    }
-
-
-    /* Chatbot */
-    .campusbot {
-        left: 10px;
-        top: auto;
-        bottom: 20px;
-    }
-
-    .campusbot-window {
-        left: 5%;
-        bottom: 85px;
-        width: 90%;
-        height: 70vh;
-        max-height: 550px;
-    }
+  .campusbot-window {
+    left: 5%;
+    bottom: 85px;
+    width: 90%;
+    height: 70vh;
+    max-height: 550px;
+  }
 }
-
 
 /* ---------- Small Mobile ---------- */
 @media (max-width: 480px) {
+  header nav ul {
+    justify-content: center;
+  }
 
-    header nav ul {
-        justify-content: center;
-    }
+  header nav ul li {
+    margin: 4px 6px;
+    font-size: 12px;
+  }
 
-    header nav ul li {
-        margin: 4px 6px;
-        font-size: 12px;
-    }
+  nav img {
+    width: 45vw;
+  }
 
-    nav img {
-        width: 45vw;
-    }
+  /* Hero */
+  .hero {
+    min-height: 50vh;
+    padding: 20px 10px;
+  }
 
+  .hero h2 {
+    font-size: 1.5rem;
+  }
 
-    /* Hero */
-    .hero {
-        min-height: 50vh;
-        padding: 20px 10px;
-    }
+  .hero p {
+    font-size: 0.9rem;
+  }
 
-    .hero h2 {
-        font-size: 1.5rem;
-    }
+  .btn-primary,
+  .btn-secondary {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+  }
 
-    .hero p {
-        font-size: 0.9rem;
-    }
+  /* Statistics */
+  .stat-row {
+    width: 90%;
+    margin: 6px auto;
+  }
 
-    .btn-primary,
-    .btn-secondary {
-        display: block;
-        width: 90%;
-        margin: 10px auto;
-    }
+  /* How It Works */
+  .how-it-works {
+    padding: 15px 5px;
+  }
 
+  .how-it-works > h2 {
+    font-size: 1.5rem;
+  }
 
-    /* Statistics */
-    .stat-row {
-        width: 90%;
-        margin: 6px auto;
-    }
+  .step {
+    gap: 5px;
+  }
 
+  .icons svg {
+    width: 35px;
+    height: 35px;
+  }
 
-    /* How It Works */
-    .how-it-works {
-        padding: 15px 5px;
-    }
+  .icon h2 {
+    font-size: 1.1rem;
+  }
 
-    .how-it-works > h2 {
-        font-size: 1.5rem;
-    }
+  .icon p {
+    font-size: 0.85rem;
+  }
 
-    .step {
-        gap: 5px;
-    }
+  .arrow {
+    font-size: 20px;
+    margin: 3px 0;
+  }
 
-    .icons svg {
-        width: 35px;
-        height: 35px;
-    }
+  /* Login */
+  .login-container {
+    width: 92%;
+    margin-top: 3rem;
+  }
 
-    .icon h2 {
-        font-size: 1.1rem;
-    }
+  .login-container h1 {
+    font-size: 1.7rem;
+  }
 
-    .icon p {
-        font-size: 0.85rem;
-    }
+  /* Profile */
+  .profile-card {
+    width: 92%;
+    padding: 12px;
+  }
 
-    .arrow {
-        font-size: 20px;
-        margin: 3px 0;
-    }
+  /* Report */
+  .Report-Container {
+    width: 92%;
+    padding: 10px;
+  }
 
-
-    /* Login */
-    .login-container {
-        width: 92%;
-        margin-top: 3rem;
-    }
-
-    .login-container h1 {
-        font-size: 1.7rem;
-    }
-
-
-    /* Profile */
-    .profile-card {
-        width: 92%;
-        padding: 12px;
-    }
-
-
-    /* Report */
-    .Report-Container {
-        width: 92%;
-        padding: 10px;
-    }
-
-
-    /* Chatbot */
-    .campusbot-window {
-        left: 3%;
-        width: 94%;
-        bottom: 80px;
-        height: 65vh;
-    }
+  /* Chatbot */
+  .campusbot-window {
+    left: 3%;
+    width: 94%;
+    bottom: 80px;
+    height: 65vh;
+  }
 }
-
 
 /* ---------- Extra Small Phones ---------- */
 @media (max-width: 360px) {
+  .hero h2 {
+    font-size: 1.3rem;
+  }
 
-    .hero h2 {
-        font-size: 1.3rem;
-    }
+  .hero p {
+    font-size: 0.85rem;
+  }
 
-    .hero p {
-        font-size: 0.85rem;
-    }
+  header nav ul li {
+    font-size: 11px;
+    margin: 3px 4px;
+  }
 
-    header nav ul li {
-        font-size: 11px;
-        margin: 3px 4px;
-    }
+  .how-it-works > h2 {
+    font-size: 1.3rem;
+  }
 
-    .how-it-works > h2 {
-        font-size: 1.3rem;
-    }
+  .icon h2 {
+    font-size: 1rem;
+  }
 
-    .icon h2 {
-        font-size: 1rem;
-    }
+  .icon p {
+    font-size: 0.8rem;
+  }
 
-    .icon p {
-        font-size: 0.8rem;
-    }
+  .icons svg {
+    width: 32px;
+    height: 32px;
+  }
 
-    .icons svg {
-        width: 32px;
-        height: 32px;
-    }
-
-    .campusbot-window {
-        width: 96%;
-        left: 2%;
-    }
+  .campusbot-window {
+    width: 96%;
+    left: 2%;
+  }
 }
-

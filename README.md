@@ -20,10 +20,12 @@ No MongoDB is required for the demo. If `MONGO_URI` is not set, CampusFix uses `
 ## Demo login
 
 Student:
+
 - Email: `anup@college.edu`
 - Password: any non-empty value
 
 Admin:
+
 - Email: `admin@campusfix.com`
 - Password: any non-empty value
 
