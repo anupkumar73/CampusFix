@@ -955,7 +955,7 @@ h2 {
   display: grid;
   place-items: center;
   height: 69vh;
-  width: 20rem;
+  width: 21rem;
   margin: auto;
   margin-top: 10rem;
   box-shadow: #ccc 10px 10px 10px 0px;
@@ -973,21 +973,15 @@ h2 {
 }
 
 .Report-Container label {
-  margin-left: 0.5rem;
   font-size: 0.8rem;
   font-weight: 600;
 }
 
 .Report-Container input,
 .Report-Container #problem-description {
-  margin-left: 0.5rem;
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
-}
-
-.Report-Container #Category {
-  margin-left: 0.5rem;
 }
 
 /* media queri */
