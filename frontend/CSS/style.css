@@ -938,15 +938,17 @@ h2 {
 .card {
   display: grid;
   place-items: center;
-  height: 65vh;
   width: 20rem;
+  min-height: 65vh;
+  height: auto;
   margin: auto;
   margin-top: 10rem;
   background: #ffffff;
   border-radius: 12px;
   padding: 20px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 15px #0000000d;
   border: 1px solid #e5e7eb;
+  box-sizing: border-box;
 }
 
 .Report-Container {
@@ -976,14 +978,12 @@ h2 {
   font-weight: 600;
 }
 
-.Report-Container input {
-  margin-left: 0.5rem;
-  width: 32vw;
-}
-
+.Report-Container input,
 .Report-Container #problem-description {
   margin-left: 0.5rem;
-  width: 32vw;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .Report-Container #Category {
