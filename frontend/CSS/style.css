@@ -207,6 +207,13 @@ footer h4 {
   touch-action: none;
 }
 
+.campusbot-btn img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    display: block;
+}
+
 .campusbot-btn:active {
   cursor: grabbing;
 }
