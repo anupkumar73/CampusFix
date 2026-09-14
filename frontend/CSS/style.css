@@ -186,21 +186,25 @@ footer h4 {
 }
 
 /* ===== bot.css ===== */
+
 .campusbot {
   position: fixed;
-  left: 15px;
-  top: 70%;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 9999;
 }
 
 .campusbot-btn {
-  width: 55px;
-  height: 55px;
+  width: 90px;
+  height: 90px;
   border: none;
   background: transparent;
   cursor: grab;
-  font-size: 35px;
+  font-size: 60px;
   padding: 0;
+  user-select: none;
+  touch-action: none;
 }
 
 .campusbot-btn:active {

@@ -707,3 +707,55 @@ async function loadAdminDashboard() {
     alert("Admin access required. Login with admin@campusfix.com");
   }
 }
+
+// ===== Draggable CampusBot =====
+
+const campusBot = document.getElementById("campusBot");
+const campusBotBtn = document.getElementById("campusBotBtn");
+
+if (campusBot && campusBotBtn) {
+  let isDragging = false;
+  let offsetX = 0;
+  let offsetY = 0;
+
+  campusBotBtn.addEventListener("pointerdown", (e) => {
+    isDragging = true;
+
+    const rect = campusBot.getBoundingClientRect();
+
+    offsetX = e.clientX - rect.left;
+    offsetY = e.clientY - rect.top;
+
+    campusBotBtn.setPointerCapture(e.pointerId);
+    campusBotBtn.style.cursor = "grabbing";
+  });
+
+  campusBotBtn.addEventListener("pointermove", (e) => {
+    if (!isDragging) return;
+
+    let x = e.clientX - offsetX;
+    let y = e.clientY - offsetY;
+
+    // Screen ke bahar nahi jaane dena
+    const maxX = window.innerWidth - campusBot.offsetWidth;
+    const maxY = window.innerHeight - campusBot.offsetHeight;
+
+    x = Math.max(0, Math.min(x, maxX));
+    y = Math.max(0, Math.min(y, maxY));
+
+    campusBot.style.left = `${x}px`;
+    campusBot.style.top = `${y}px`;
+    campusBot.style.right = "auto";
+    campusBot.style.transform = "none";
+  });
+
+  campusBotBtn.addEventListener("pointerup", (e) => {
+    isDragging = false;
+
+    try {
+      campusBotBtn.releasePointerCapture(e.pointerId);
+    } catch (error) {}
+
+    campusBotBtn.style.cursor = "grab";
+  });
+}
